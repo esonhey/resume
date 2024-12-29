@@ -43,7 +43,7 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
+% Ensure that generated PDF is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
@@ -54,7 +54,10 @@
   }
 }
 
-% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeItemSub}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
 \newcommand{\resumeHeading}[4]{
     \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
@@ -88,132 +91,94 @@
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \begin{document}
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://sourabhbajaj.com/}{\Large Ehsan Heydari}} & Email : \href{mailto:ehsan.heydari.yk@gmail.com}{ehsan.heydari.yk@gmail.com}\\
+  \textbf{\href{https://linkedin.com/in/ehsanheydariyk}{\Large Ehsan Heydari}} & Email : \href{mailto:ehsan.heydari.yk@gmail.com}{ehsan.heydari.yk@gmail.com}\\
   \href{https://github.com/ehsan-github}{https://github.com/ehsan-github} & Mobile : \href{tel:+46721697133}{+46-72-169-7133} \\
 \end{tabular*}
-
-
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {\href{https://www.hopsworks.ai/}{Hopsworks}}{Stockholm, Sweden}
-      {Lead Frontend Engineer}{Feb 2022 - Present}
+      {Hopsworks}{Stockholm, Sweden}
+      {Lead Frontend Engineer}{Feb 2022 -- Present}
       \resumeItemListStart
-        \resumeItem{Hopsworks-UI}
-          {TensorFlow is an open source software library for numerical computation using data flow graphs; primarily used for training deep learning models. Worked on APIs and performance for training models on Tensor Processing Units (TPU).}
-        \resumeItem{\href{https://github.com/logicalclocks/quartz}{Quartz Component Library}}
-          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines, as well as a set of language-specific SDKs for constructing pipelines and runners.}
+        \resumeItem{Hopsworks-UI}{Redesigned the Web interface for Hopsworks AI Lakehouse, achieving a 2x faster page load time. Established robust End-to-End and unit testing practices, significantly enhancing product quality and feature delivery.}
+        \resumeItem{File Browser}{Developed a File Browser with a command-line interface, boosting customer satisfaction through enhanced usability.}
+        \resumeItem{Mentorship}{Mentored junior and mid-level developers in JavaScript and React best practices, improving code quality and team productivity.}
+        \resumeItem{Team Leadership}{Led hiring for frontend roles, growing a high-performing team of 7-8 members. Facilitated code reviews and project planning sessions, ensuring timely feature delivery and continuous improvement.}
+        \resumeItem{Quartz Component Library}{Built and maintained a reusable React component library, enabling faster development of complex UIs.}
       \resumeItemListEnd
-      
+
     \resumeSubheading
       {Snow Software}{Stockholm, Sweden}
-      {Senior Software Engineer}{Aug 2020 - Feb 2022}
+      {Senior Software Engineer}{Aug 2020 -- Feb 2022}
       \resumeItemListStart
-        \resumeItem{Web Service Template}
-          {React based app Template to setup a web app used by different teams across the company to facilitate development.}
-        \resumeItem{Portal}
-          {Dashboard for managing and monitoring the company's internal applications. Implemented dynamic loading of SPA routes and navigation items using backend APIs.}
-        \resumeItem{Design System Library - Table}
-          {Implemented a feature-rich and customizable Table component using ReactTable in the internal design systeml library.}
-        \resumeItem{Micro Frontents}
-          {Migrated exiting internal applications to micro frontends. This was important for the company to be able to scale the applications and give the teams full control over their development and deployment.}
-        \resumeItem{Workshops}
-          {Hold internal workshops and provide React based training to the team.}
-        \resumeItem{Documentation}
-          {Service for integrating software documents written by technical writers with internal Product applications. Built an internal component library to reuse same components across different applications.}
+        \resumeItem{Web Service Template}{Created a React-based app template to streamline development across teams. Integrated dynamic SPA route loading and backend-driven navigation.}
+        \resumeItem{Micro Frontends}{Migrated internal applications to a micro-frontend architecture, enhancing scalability and team autonomy in development and deployment.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Swedish Startup Recruitment}{Stockholm, Sweden}
-      {Software Engineer}{Jan. 2019 - July. 2020}
+      {Software Engineer}{Jan 2019 -- Jul 2020}
       \resumeItemListStart
-        \resumeItem{Leeroy AB}
-          {Management dashboard used by restaurant managers which helped them tracking bussiness insights accross diffrent restaurant branches. stack: React, D3, Node.js, GraphQL, Jest.}
-        \resumeItem{Qasa AB}
-          {Qasa Web App used by landlords and tenants for renting home, branded for 3 different countries. stack: React, Node.js, GraphQL, Cypress.}
-        \resumeItem{GydEd}
-          {Full Web App for school managers to track students wellbeing and activities. stack: React, Hasura, Node.js, GraphQL.}
-        \resumeItem{Teemyco}
-          {Electron Desktop App Registeration and Login System for Teemyco virtual office. stack: React, Firebase, GCP.}
+        \resumeItem{Teemyco}{Developed an Electron desktop app for a virtual office platform.}
+        \resumeItem{GydEd}{Built a web app for school managers to track student well-being and activities.}
+        \resumeItem{Qasa}{Enhanced a multi-country rental web app for landlords and tenants.}
+        \resumeItem{Leeroy}{Developed a management dashboard for restaurant insights across multiple branches.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {8Bitiz}{Stanbul, Turkey}
-      {Software Engineer}{Feb 2018 - Jan 2019}
+      {8Bitiz}{Istanbul, Turkey}
+      {Software Engineer}{Feb 2018 -- Jan 2019}
       \resumeItemListStart
-        \resumeItem{Pasabahce}
-          {Nude Mobile App for Pasabahce for listing, categorizing and sharing products, developed with React Native and PHP. Helped 8bitiz with migration from Swift to ReactNative.}
-        \resumeItem{8Bitiz Website}
-          {Implemented 8Bitiz corporate animated website. Helped 8bitiz with migration from WordPress to React. Stack: ReasonML, React, Node.}
-        \resumeItem{Airqoon}
-          {A cost-effective, reliable and easy-to-use hyperlocal air pollution management solution. Building interactive maps for air pollution monitoring. stack: ReactNative, GraphQL, D3.}
+        \resumeItem{Pasabahce}{Developed a mobile app for product listing and sharing using React Native. Migrated the codebase from Swift to React Native.}
+        \resumeItem{8Bitiz Website}{Created a corporate animated website, migrating from WordPress to React. Stack: ReasonML, React, Node.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Abgostaran}{Tehran, Iran}
-      {Frontend Developer}{Jun 2017 - Feb 2018}
+      {Frontend Developer}{Jun 2017 -- Feb 2018}
       \resumeItemListStart
-        \resumeItem{Project report management system}
-          {Implemented a highly customizable and dynamic Form-generator tool to accelerate form generation process. used Vue.js and Sharepoint.}
-        \resumeItem{Project Insights Mobile App}
-          {Designed and Implemented a mobile app for project management system. Visualizing data in various formats using Recharts. Stack: Expo.}
+        \resumeItem{Report Management System}{Implemented a customizable form-generator tool, accelerating form creation.}
+        \resumeItem{Management Insights App}{Designed and developed a mobile app visualizing data using Recharts.}
       \resumeItemListEnd
 
     \resumeSubheading
       {IranTIP}{Tehran, Iran}
-      {Frontend Developer}{Oct 2016 - Jun 2017}
+      {Frontend Developer}{Oct 2016 -- Jun 2017}
       \resumeItemListStart
-        \resumeItem{IranTIP Web App}
-          {IranTIP was a platform for connecting investors and startups. Developed IranTIP's Web app using Webpack, React, ReactRouter, jest. Visualizing data in various formats using Recharts.}
+        \resumeItem{IranTIP Web App}{Developed a platform connecting investors and startups using React and Webpack. Visualized data with Recharts.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
-
-%-----------PROJECTS-----------------
-\section{Projects}
-  \resumeSubHeadingListStart
-    \resumeSubItem{QuantSoftware Toolkit}
-      {Open source python library for financial data analysis and machine learning for finance.}
-    \resumeSubItem{Github Visualization}
-      {Data Visualization of Git Log data using D3 to analyze project trends over time.}
-    \resumeSubItem{Recommendation System}
-      {Music and Movie recommender systems using collaborative filtering on public datasets.}
-    \resumeSubItem{Mac Setup}
-      {Book that gives step by step instructions on setting up developer environment on Mac OS.}
-  \resumeSubHeadingListEnd
-
-%
-%--------PROGRAMMING SKILLS------------
+%-----------PROGRAMMING SKILLS------------
 \section{Programming Skills}
  \resumeSubHeadingListStart
    \item{
-     \textbf{Languages}{: Javascript, Python, Scala, Java, SQL, Clojure}
+     \textbf{Languages}{: TypeScript (Proficient), Python (Intermediate), Scala, Java, Clojure, SQL}
      \hfill
-     \textbf{Technologies}{: React, D3, Docker, Express, GCP}
+     \textbf{Frameworks}{: React, D3, Express}
+     \hfill
+     \textbf{DevOps}{: Docker, GCP, Git}
    }
  \resumeSubHeadingListEnd
-
 
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {Sharif University of Technology}{Tehran, Iran}
-      {Master of Computer Networks;  GPA: 3.63 (18.15/20.0)}{Aug. 2014 -- July. 2016}
+      {Master of Computer Networks; GPA: 3.62 (18.12/20.0)}{Aug 2014 -- Jul 2016}
     \resumeSubheading
       {Amirkabir University of Technology}{Tehran, Iran}
-      {Bachelor of Software Engineering; GPA: 3.46 (17.33/20.0)}{Aug. 2009 -- July. 2014}
+      {Bachelor of Information Technology; GPA: 3.24 (16.21/20.0)}{Aug 2009 -- Jul 2014}
   \resumeSubHeadingListEnd
-
 
 %-------------------------------------------
 \end{document}
